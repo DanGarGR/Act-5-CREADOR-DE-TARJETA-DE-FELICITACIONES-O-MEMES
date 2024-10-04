@@ -1,0 +1,62 @@
+.rectangle {
+    width: 300px;
+    height: 450px;
+    border: 5px solid #000;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Estilos para Yu-Gi-Oh! */
+.yugioh {
+    box-shadow: #000;
+    box-sizing: border-box;
+}
+
+/* Estilos para Pokémon */
+.pokemon {
+    border-color: purple;
+}
+
+/* Estilos para Magic: The Gathering */
+.magic {
+    border-color: black;
+}
+
+/* Tipos de carta (aplicados en Yu-Gi-Oh!) */
+.fusion {
+    background-image: url('../imagen/Aexodo\ Cabalerin.png');
+}
+
+.sincronia {
+    background-image: url('../imagen/2.png');
+}
+
+.xyz {
+    background-image: url('../imagen/3.png');
+}
+
+/* Estilos para otros tipos de cartas (Pokémon y Magic pueden tener clases personalizadas aquí) */
+.basic {
+    background-image: url('../imagen/4.png');
+}
+
+.evolution {
+    background-image: url('../imagen/5.png');
+}
+
+.mega {
+    background-image: url('../imagen/6.png');
+}
+
+.creature {
+    background-image: url('../imagen/7.png');
+}
+
+.spell {
+    background-image: url('../imagen/8.png');
+}
+
+.instant {
+    background-image: url('../imagen/9.png');
+}

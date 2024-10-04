@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creador de Cartas</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Css/css.css">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Sección izquierda -->
+            <div class="col-md-6">
+                <div class="card p-4 mb-3">
+                    <h4 class="mb-3">Editor de Carta</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label for="cardName" class="form-label">Nombre de la Carta</label>
+                            <input type="text" class="form-control" id="cardName" placeholder="Ingresa el nombre">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="attribute" class="form-label">Atributo</label>
+                            <input type="text" class="form-control" id="attribute" placeholder="Ingresa el atributo">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="monsterType" class="form-label">Tipo de Monstruo</label>
+                            <input type="text" class="form-control" id="monsterType" placeholder="Ej. Lanzador de Conjuros">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="effect" class="form-label">Efecto</label>
+                            <textarea class="form-control" id="effect" rows="4" placeholder="Describe el efecto de la carta"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="colorPicker" class="form-label">Color del Contorno de la Carta</label>
+                            <input type="color" class="form-control" id="colorPicker" value="#000000">
+                        </div>
+
+                        <h5>Seleccionar Tipo de Carta</h5>
+                        <div class="mb-3" id="cardButtonsContainer">
+                            <!-- Botones de tipo de carta -->
+                            <button type="button" class="btn btn-primary card-type-btn" data-type="fusion">Fusión</button>
+                            <button type="button" class="btn btn-success card-type-btn" data-type="sincronia">Sincronía</button>
+                            <button type="button" class="btn btn-warning card-type-btn" data-type="xyz">XYZ</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Sección derecha (Vista previa) -->
+            <div class="col-md-6">
+                <div class="d-flex justify-content-end mb-3">
+                    <!-- Botones para cambiar el TCG -->
+                    <button type="button" class="btn btn-outline-primary me-2" id="yugiohBtn">Yu-Gi-Oh!</button>
+                    <button type="button" class="btn btn-outline-success me-2" id="pokemonBtn">Pokémon</button>
+                    <button type="button" class="btn btn-outline-warning" id="magicBtn">Magic: The Gathering</button>
+                </div>
+                
+                <div class="card p-3 mb-3">
+                    <h4 class="mb-3">Vista Previa</h4>
+                    <div class="card-preview position-relative">
+                        <!-- Este es el rectángulo generado por CSS -->
+                        <div id="previewRectangle" class="rectangle yugioh">
+                            <div class="card-details position-absolute top-0 start-0 p-3 text-white">
+                                <h5 id="previewCardName" class="mb-1">Nombre de la Carta</h5>
+                                <p id="previewAttribute" class="mb-1">Atributo: Viento</p>
+                                <p id="previewMonsterType" class="mb-1">Tipo de Monstruo: Lanzador de Conjuros</p>
+                                <p id="previewEffect">Efecto: Descripción del efecto aquí...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Archivo JavaScript externo -->
+    <script src="./java/java.js"></script>
+
+</body>
+</html>
